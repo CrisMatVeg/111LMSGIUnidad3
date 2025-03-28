@@ -30,5 +30,23 @@
             <div>Esto es un desplegable que está colapsado.</div>
         </details>
     </div>
+    <script>
+        var container = document.querySelector('.container');
+        var strong = document.getElementsByTagName('strong')[0];
+        var mark = document.getElementsByTagName('mark')[0];
+        var hiddenParagraphs = document.querySelectorAll('p[hidden]');
+        var details = document.querySelector('details');
+
+        container.firstElementChild.innerText = "Hola a todos. modificado";
+        var newParagraph = document.createElement('p');
+        newParagraph.innerText = "Este es un nuevo párrafo añadido dinámicamente.";
+        container.appendChild(newParagraph);
+        strong.innerText = "Juan";
+        mark.style.display = 'block';
+        hiddenParagraphs.forEach(function(paragraph) {
+            paragraph.removeAttribute('hidden');
+        });
+        details.open=true;
+    </script>
 </body>
 </html>
