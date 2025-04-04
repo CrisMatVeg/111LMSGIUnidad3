@@ -1,0 +1,20 @@
+.botones{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: rgb(62, 121, 107);
+    padding: 20px;
+}
+input[type="button"]{
+    width: 100%;
+    padding: 10px;
+    background-color: #469fff;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 16px;
+}
