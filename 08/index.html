@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Ejemplo 8 DOM</title>
-      <link rel="stylesheet" href="css/estilos.css" />
-    </head>
-  <body>
-    <h1>Ejemplo 8 DOM: Crear tabla</h1>
-    <label for="filas">Número de filas:</label>
-    <input type="number" id="filas" min="1" max="10" value="2">  
-    <label for="numerocolumnas">Número de columnas:</label>
-    <input type="number" id="numerocolumnas"  min="1" max="10" value="2">
-    <input type="button" value="Genera una tabla" onclick="genera_tabla()" />
-  </body>
-  <script></script>
-  </html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejemplo 8 DOM</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+  <h1>Ejemplo 8 DOM: Crear tabla</h1>
+  <label for="filas">Número de filas:</label>
+  <input type="number" id="filas" min="1" max="10" value="2">
+  <label for="numerocolumnas">Número de columnas:</label>
+  <input type="number" id="numerocolumnas" min="1" max="10" value="2">
+  <input type="button" value="Genera una tabla" onclick="genera_tabla()" />
+</body>
+<script>
+
+  function genera_tabla() {
+    var tablaExistente = document.querySelector("table");
+    if (tablaExistente) {
+      tablaExistente.remove();
+    }
+    var tabla = "<table border='1'>";
+    var filas = document.getElementById("filas").value;
+    var columnas = document.getElementById("numerocolumnas").value;
+    for (var i = 0; i < filas; i++) {
+      tabla += "<tr>";
+      for (var j = 0; j < columnas; j++) {
+        tabla += "<td>F" + (i + 1) + "C" + (j + 1) + "</td>";
+      }
+      tabla += "</tr>";
+    }
+    tabla += "</table>";
+    document.body.innerHTML += tabla;
+  }
+</script>
+
+</html>
