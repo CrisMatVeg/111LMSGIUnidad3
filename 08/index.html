@@ -17,19 +17,18 @@
   <input type="button" value="Genera una tabla" onclick="genera_tabla()" />
 </body>
 <script>
-
   function genera_tabla() {
-    var tablaExistente = document.querySelector("table");
+    let tablaExistente = document.querySelector("table");
     if (tablaExistente) {
       tablaExistente.remove();
     }
-    var tabla = "<table border='1'>";
-    var filas = document.getElementById("filas").value;
-    var columnas = document.getElementById("numerocolumnas").value;
-    for (var i = 0; i < filas; i++) {
+    let tabla = "<table border='1'>";
+    let filas = document.getElementById("filas").value;
+    let columnas = document.getElementById("numerocolumnas").value;
+    for (let i = 0; i < filas; i++) {
       tabla += "<tr>";
-      for (var j = 0; j < columnas; j++) {
-        tabla += "<td>F" + (i + 1) + "C" + (j + 1) + "</td>";
+      for (let j = 0; j < columnas; j++) {
+        tabla += "<td>Fila " + (i + 1) + ", Columna " + (j + 1) + "</td>";
       }
       tabla += "</tr>";
     }

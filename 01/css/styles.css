@@ -31,3 +31,10 @@ footer button {
 footer button:hover {
     background-color: darkblue;
 }
+
+parrafo_modificado {
+    font-size:"20px";
+    letter-spacing:"2px";
+    transform: rotate(1deg);
+    font-weight: bold;
+}

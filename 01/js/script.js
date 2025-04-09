@@ -69,7 +69,6 @@ function cambiarColor() {
 let parrafosModificados = false;
 function cambiarParrafos() {
     const parrafos = document.querySelectorAll("p");
- 
     if (!parrafosModificados) {
         parrafos.forEach(parrafo => {
             parrafo.style.fontSize = "20px";
